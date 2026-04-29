@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Treasure Draw Demo</title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="page">
+        <section class="banner">
+            <img src="image/banner_w1920.png" class="banner-desktop m-hide" />
+            <img src="image/banner_w1080.png" class="banner-mobile w-hide" />
+        </section>
+        <section class="jackpotJoin">
+            <div class="jackpotJoin__inner">
+                <h2 class="jackpotJoin__title">How to Join the Daily Jackpot</h2>
+
+                <div class="jackpotJoin__vendorTitle">Entitled Vender :</div>
+
+                <div class="jackpotJoin__vendors">
+                    <div class="vendorCard">
+                        <img src="image/vendor-ssport.png" alt="Vendor Logo">
+                    </div>
+
+                    <div class="vendorCard">
+                        <img src="image/vendor-maxbet.png" alt="Vendor Logo">
+                    </div>
+                </div>
+
+                <p class="jackpotJoin__desc">
+                    Bet on (League Name) matches with min stake (x) &amp; min (x) matches/day to earn chances.
+                </p>
+
+                <div class="jackpotJoin__reward">
+                    <div class="rewardRule">
+                        <div class="rewardRule__chest">
+                            <img src="image/tresure_chest.png" alt="Treasure Chest">
+                        </div>
+
+                        <div class="rewardRule__pill">
+                            <span>Every 2 Match = 1 chest</span>
+                        </div>
+                    </div>
+
+                    <div class="jackpotJoin__dates">
+                        <div>Start Date : 11-06-2026 12:00:00</div>
+                        <div>End Date : 19-07-2026 12:00:00</div>
+                    </div>
+                </div>
+
+                <button class="claimBtn" id="drawBtn" type="button">CLAIM NOW</button>
+
+                <div class="chancePill">
+                    <span class="chancePill__label">Chance</span>
+                    <span class="chancePill__value">2</span>
+                </div>
+
+                <p class="jackpotJoin__note">
+                    Chances will be expired in 24 hour. Please claim before expired!
+                </p>
+            </div>
+        </section>
+        <section class="winnerBoard">
+            <h3>
+                Sportsbook Daily Jackpot Winner!
+            </h3>
+            <div class="winnerBoard__tabs" role="tablist">
+                <button class="winnerBoard__tab is-active" type="button" data-winner-tab="top20">Top 20 Winners</button>
+                <button class="winnerBoard__tab" type="button" data-winner-tab="last">Last Winners</button>
+            </div>
+
+            <div class="winnerTableWrap">
+                <table class="winnerTable">
+                    <thead>
+                        <tr>
+                            <th>RANK</th>
+                            <th>USERNAME</th>
+                            <th>DATE AND TIME</th>
+                            <th>PRIZE</th>
+                        </tr>
+                    </thead>
+                    <tbody id="winnerTableBody"></tbody>
+                </table>
+            </div>
+
+            <div class="winnerPager" id="winnerPager" hidden>
+                <button class="winnerPager__btn" type="button" id="winnerPrevBtn">Prev</button>
+                <span class="winnerPager__page" id="winnerPageText">Page 1 / 1</span>
+                <button class="winnerPager__btn" type="button" id="winnerNextBtn">Next</button>
+            </div>
+        </section>
+    </div>
+
+    <div class="lotteryModal" id="lotteryModal" aria-hidden="true">
+        <div class="lotteryModal__backdrop"></div>
+
+        <div class="lotteryPanel" role="dialog" aria-modal="true">
+
+            <div class="lotteryPanel__header">
+
+                <button class="lotteryPanel__close" id="closeLottery" type="button">×</button>
+                <h2 class="lotteryPanel__title">
+                    <img src="image/title.png" alt="Grand Jackpot MYR1888" />
+                </h2>
+
+                <p class="lotteryPanel__desc">Open Your Lucky Chest</p>
+            </div>
+
+            <div class="arena">
+                <div class="boxes" id="boxes"></div>
+            </div>
+
+            <div class="arena-bottom">
+                <div class="lotteryPanel__warning">You have <span>2</span> chance to open.</div>
+                <div class="lotteryPanel__remaining">Chances will be expired in 24 hour. Please claim  before expired!</div>
+            </div>
+
+            <div class="revealScene" id="revealScene">
+                <div class="revealScene__shade"></div>
+
+                <div class="revealScene__stage" id="revealStage">
+                    <div class="revealScene__halo"></div>
+                    <div class="revealScene__coreGlow"></div>
+                    <div class="revealScene__rays" id="revealRays"></div>
+                    <div class="revealScene__flash"></div>
+
+                    <div class="revealChest" id="revealChest"></div>
+                    <div class="revealScene__reward rewardCard" id="revealRewardCard">
+                        <div class="rewardCard__chest">
+                            <img src="" alt="Reward Chest">
+                        </div>
+
+                        <div class="rewardCard__body">
+                            <div class="reward-desc" id="rewardDesc">You just received reward!</div>
+
+                            <div class="rewardCard__amount">
+                                <img class="reward-icon" id="rewardIcon" src="image/icn__money.png" alt="Reward Icon" />
+                                <span class="reward-name" id="rewardName">MYR 1000</span>
+                            </div>
+
+                            <button class="again-btn" id="againBtn" type="button">CLAIM</button>
+                        </div>
+                    </div>
+                    <div class="confetti-layer" id="confettiLayer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/rewards.js"></script>
+
+</body>
+</html>
