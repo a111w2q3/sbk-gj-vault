@@ -120,7 +120,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
 .lotteryModal__backdrop { position: absolute; inset: 0; background: var(--bg); backdrop-filter: none; }
 
-.lotteryPanel { position: fixed; inset: 0; z-index: 2; width: 100vw; height: 100dvh; max-height: none; overflow: hidden; border-radius: 0; padding: 28px 32px 36px; border: 0; box-shadow: none; transform: none; transition: none; isolation: isolate; background-image: url('../image/background-lotteryPanel.jpg'); background-size: cover; }
+.lotteryPanel { position: fixed; inset: 0; z-index: 2; width: 100vw; height: 100dvh; max-height: none; overflow: hidden; border-radius: 0; padding: 28px 32px 36px; border: 0; box-shadow: none; transform: none; transition: none; isolation: isolate; background-image: url('image/background-lotteryPanel.jpg'); background-size: cover; }
 
 .lotteryModal.is-open .lotteryPanel { transform: none; }
 
