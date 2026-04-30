@@ -1,7 +1,12 @@
-﻿const ASSETS = {
-    bottom: "../image/treasure_bottom.png",
-    inner: "../image/treasure_inner.png",
-    top: "../image/treasure_top.png"
+const SCRIPT_URL = document.currentScript ? document.currentScript.src : "";
+const ASSET_BASE = SCRIPT_URL ? new URL("../image/", SCRIPT_URL).href : "image/";
+const ASSETS = {
+    baseInner: `${ASSET_BASE}base-inner.png`,
+    rimFront: `${ASSET_BASE}rim-front.png`,
+    baseOuter: `${ASSET_BASE}base-outer.png`,
+    lidClosed: `${ASSET_BASE}lid-outer_unopen.png`,
+    lidInner: `${ASSET_BASE}lid-inner.png`,
+    lidOuter: `${ASSET_BASE}lid-outer.png`
 };
 
 const rewards = [
@@ -69,12 +74,18 @@ let hasChosen = false;
 
 function createTreasureHTML(extraClass = "") {
     return `
-                        <div class="treasure ${extraClass}">
-                            <img class="treasure__bottom" src="${ASSETS.bottom}" alt="">
-                            <img class="treasure__inner" src="${ASSETS.inner}" alt="">
-                            <img class="treasure__top" src="${ASSETS.top}" alt="">
-                        </div>
-                    `;
+        <div class="treasure ${extraClass}">
+            <img class="base-inner" src="${ASSETS.baseInner}" alt="">
+            <img class="rim-front" src="${ASSETS.rimFront}" alt="">
+            <div class="treasure__glow"></div>
+            <img class="base-outer" src="${ASSETS.baseOuter}" alt="">
+            <img class="lid-closed" src="${ASSETS.lidClosed}" alt="">
+            <div class="lid-open">
+                <img class="lid-inner" src="${ASSETS.lidInner}" alt="">
+                <img class="lid-outer" src="${ASSETS.lidOuter}" alt="">
+            </div>
+        </div>
+    `;
 }
 
 function renderBoxes() {
@@ -205,7 +216,8 @@ async function chooseBox(selectedBox) {
 }
 
 async function playReveal(selectedBox, reward) {
-    rewardIcon.textContent = reward.icon;
+    rewardIcon.src = reward.image;
+    rewardIcon.alt = reward.name;
     rewardName.textContent = reward.name;
     rewardDesc.textContent = reward.desc;
 
@@ -418,7 +430,12 @@ const lastWinners = [
 ];
 
 
+const AVATAR_BASE = "../image/";
 
+function getRandomAvatar() {
+    const avatarNo = Math.floor(Math.random() * 12) + 1;
+    return `${AVATAR_BASE}avatar${avatarNo}.png`;
+}
 function renderWinnerBoard() {
     const isTop20 = activeWinnerTab === "top20";
     const source = isTop20 ? top20Winners.slice(0, 20) : getLastWinnerPageItems();
@@ -428,19 +445,23 @@ function renderWinnerBoard() {
             ? index + 1
             : (lastWinnerPage - 1) * WINNER_PAGE_SIZE + index + 1;
 
+        const avatarSrc = item.avatar || getRandomAvatar();
+
         return `
-            <tr>
-                <td>${rank}</td>
-                <td>
-                    <span class="winnerUser">
-                        <span class="winnerUser__avatar"></span>
-                        <span class="winnerUser__name">${item.username}</span>
+        <tr>
+            <td>${rank}</td>
+            <td>
+                <span class="winnerUser">
+                    <span class="winnerUser__avatar">
+                        <img src="${avatarSrc}" alt="">
                     </span>
-                </td>
-                <td>${item.date}</td>
-                <td><span class="winnerPrize">${item.prize}</span></td>
-            </tr>
-        `;
+                    <span class="winnerUser__name">${item.username}</span>
+                </span>
+            </td>
+            <td>${item.date}</td>
+            <td><span class="winnerPrize">${item.prize}</span></td>
+        </tr>
+    `;
     }).join("");
 
     updateWinnerPager();
