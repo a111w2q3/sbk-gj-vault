@@ -430,7 +430,7 @@ const lastWinners = [
 ];
 
 
-const AVATAR_BASE = "../image/";
+const AVATAR_BASE = "image/";
 
 function getRandomAvatar() {
     const avatarNo = Math.floor(Math.random() * 12) + 1;
