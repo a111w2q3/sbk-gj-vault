@@ -1,5 +1,5 @@
 const SCRIPT_URL = document.currentScript ? document.currentScript.src : "";
-const ASSET_BASE = SCRIPT_URL ? new URL("../image/", SCRIPT_URL).href : "image/";
+const ASSET_BASE = SCRIPT_URL ? new URL("image/", SCRIPT_URL).href : "image/";
 const ASSETS = {
     baseInner: `${ASSET_BASE}base-inner.png`,
     rimFront: `${ASSET_BASE}rim-front.png`,
@@ -430,7 +430,7 @@ const lastWinners = [
 ];
 
 
-const AVATAR_BASE = "../image/";
+const AVATAR_BASE = "image/";
 
 function getRandomAvatar() {
     const avatarNo = Math.floor(Math.random() * 12) + 1;
