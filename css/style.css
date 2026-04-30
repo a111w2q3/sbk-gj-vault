@@ -307,7 +307,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
 .revealScene.open-on .revealScene__coreGlow { animation: glowSuckIn .42s ease-in forwards; }
 
-.revealScene.open-on .revealScene__ray { animation: raySuckIn .42s ease-in forwards; }
+.revealScene.open-on .revealScene__ray { animation: rayCollapseBurst .58s cubic-bezier(.16, .9, .24, 1) forwards; }
 
 
 .winnerBoard { width: min(1180px, calc(100% - 32px)); margin: 28px auto; border-radius: 10px; overflow: hidden; }
@@ -526,7 +526,15 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
     100% { opacity: 0; transform: rotate(var(--deg)) translateX(0px) scaleX(1.15); }
 }
+@keyframes rayCollapseBurst {
+    0% { opacity: 0; transform: rotate(var(--deg)) translateX(18px) scaleX(.35); }
 
+    18% { opacity: .95; transform: rotate(var(--deg)) translateX(0px) scaleX(.55); }
+
+    34% { opacity: 1; transform: rotate(var(--deg)) translateX(0px) scaleX(.18); }
+
+    100% { opacity: 0; transform: rotate(var(--deg)) translateX(430px) scaleX(1.85); }
+}
 /* =========================
    Responsive
 ========================= */
