@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8" />
@@ -10,7 +10,7 @@
 <body>
     <div class="page">
         <section class="banner">
-            <img src="image/banner_w1920.png" class="banner-desktop m-hide" />
+            <img src="/image/banner_w1920.png" class="banner-desktop m-hide" />
             <img src="image/banner_w1080.png" class="banner-mobile w-hide" />
         </section>
         <section class="jackpotJoin">
@@ -20,11 +20,11 @@
                 <div class="jackpotJoin__vendorTitle">Entitled Vender :</div>
 
                 <div class="jackpotJoin__vendors">
-                    <div class="vendorCard">
+                    <div class="vendorCard vendorcolor--a">
                         <img src="image/vendor-ssport.png" alt="Vendor Logo">
                     </div>
 
-                    <div class="vendorCard">
+                    <div class="vendorCard vendorcolor--b">
                         <img src="image/vendor-maxbet.png" alt="Vendor Logo">
                     </div>
                 </div>
@@ -35,8 +35,18 @@
 
                 <div class="jackpotJoin__reward">
                     <div class="rewardRule">
-                        <div class="rewardRule__chest">
-                            <img src="image/tresure_chest.png" alt="Treasure Chest">
+                        <div class="rewardRule__chest" aria-hidden="true">
+                            <div class="treasure treasure--promo">
+                                <img class="base-inner" src="image/base-inner.png" alt="">
+                                <img class="rim-front" src="image/rim-front.png" alt="">
+                                <div class="treasure__glow"></div>
+                                <img class="base-outer" src="image/base-outer.png" alt="">
+                                <img class="lid-closed" src="image/lid-outer_unopen.png" alt="">
+                                <div class="lid-open">
+                                    <img class="lid-inner" src="image/lid-inner.png" alt="">
+                                    <img class="lid-outer" src="image/lid-outer.png" alt="">
+                                </div>
+                            </div>
                         </div>
 
                         <div class="rewardRule__pill">
@@ -63,7 +73,7 @@
             </div>
         </section>
         <section class="winnerBoard">
-            <h3>
+            <h3 class="winnerBoard__title">
                 Sportsbook Daily Jackpot Winner!
             </h3>
             <div class="winnerBoard__tabs" role="tablist">
@@ -86,9 +96,18 @@
             </div>
 
             <div class="winnerPager" id="winnerPager" hidden>
-                <button class="winnerPager__btn" type="button" id="winnerPrevBtn">Prev</button>
                 <span class="winnerPager__page" id="winnerPageText">Page 1 / 1</span>
-                <button class="winnerPager__btn" type="button" id="winnerNextBtn">Next</button>
+                <button class="winnerPager__btn" type="button" id="winnerPrevBtn" aria-label="Previous page">
+                    <svg class="winnerPager__ico" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M15.5 5L8.5 12L15.5 19" />
+                    </svg>
+                </button>
+
+                <button class="winnerPager__btn" type="button" id="winnerNextBtn" aria-label="Next page">
+                    <svg class="winnerPager__ico" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M8.5 5L15.5 12L8.5 19" />
+                    </svg>
+                </button>
             </div>
         </section>
     </div>
@@ -128,8 +147,18 @@
 
                     <div class="revealChest" id="revealChest"></div>
                     <div class="revealScene__reward rewardCard" id="revealRewardCard">
-                        <div class="rewardCard__chest">
-                            <img src="" alt="Reward Chest">
+                        <div class="rewardCard__chest" aria-hidden="true">
+                            <div class="treasure treasure--reward is-open">
+                                <img class="base-inner" src="image/base-inner.png" alt="">
+                                <img class="rim-front" src="image/rim-front.png" alt="">
+                                <div class="treasure__glow"></div>
+                                <img class="base-outer" src="image/base-outer.png" alt="">
+                                <img class="lid-closed" src="image/lid-outer_unopen.png" alt="">
+                                <div class="lid-open">
+                                    <img class="lid-inner" src="image/lid-inner.png" alt="">
+                                    <img class="lid-outer" src="image/lid-outer.png" alt="">
+                                </div>
+                            </div>
                         </div>
 
                         <div class="rewardCard__body">
