@@ -1,3 +1,10 @@
+const fifa26Float = document.getElementById("fifa26Float");
+const fifa26Close = document.getElementById("fifa26Close");
+
+fifa26Close.addEventListener("click", () => {
+    fifa26Float.classList.add("is-hidden");
+});
+
 const SCRIPT_URL = document.currentScript ? document.currentScript.src : "";
 const ASSET_BASE = SCRIPT_URL ? new URL("../image/", SCRIPT_URL).href : "image/";
 const ASSETS = {
