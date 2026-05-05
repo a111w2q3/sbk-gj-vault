@@ -629,6 +629,8 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 }
 
 
+/****** fifa float */
+
 .fifa26F { position: fixed; bottom: 5%; }
     .fifa26F.is-hidden { display: none; }
 .fifa26F-close { position: absolute; right: 0px; top: 0px; z-index: 20; width: 26px; height: 26px; border-radius: 999px; font-size: var(--fs-18); display: flex; justify-content: center; align-items: center; font-weight: bold; color: var(--main); background: var(--accent-close); box-shadow: inset 0 0 0 1px var(--main-border-mid), 0 8px 20px var(--black-shadow); cursor: pointer; z-index: 11; }
@@ -645,6 +647,10 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 .fafi26F-ball2 { width: 100%; position: absolute; border-radius: 999px; transform-origin: center; animation: fifaBallRotateReverse 8s linear infinite; }
 .fafi26F-text { width: 80%; z-index: 9; position: absolute; bottom: 0; margin: auto; left: 0; right: 0; transform-origin: center; animation: fifaTextPulse 1.35s ease-in-out infinite; }
 
+
+@media (max-width:767.98px){
+    .fifa26F-canvas{width:150px; height:150px;}
+}
 @keyframes fifaCharFloatA {
     0%, 100% { transform: translateY(0) rotate(0deg); }
 
