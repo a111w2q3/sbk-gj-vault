@@ -1,6 +1,6 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-:root { /* radius */ --panel-radius: 30px; /* base colors */ --bg: #1a0a0a; --bg-deep: #090303; --bg-soft: #2a0f11; --bg-card: #3a0505; --bg-field-stripe-a: #1a0a0a; --bg-field-stripe-b: #230d0f; --bg-vendor-dark: #051423; /* main colors */ --main: #f5ce6c; --font-secondary: #ffdedd; --color-brown: #472e27; --main-light: #fff1b8; --main-soft: rgba(245, 206, 108, .18); --main-page-glow: rgba(245, 206, 108, .16); --main-panel-glow: rgba(245, 206, 108, .13); --main-mid: rgba(245, 206, 108, .45); --main-strong: rgba(245, 206, 108, .82); --main-border: rgba(245, 206, 108, .25); --main-border-soft: rgba(245, 206, 108, .24); --main-border-mid: rgba(245, 206, 108, .28); --main-border-strong: rgba(245, 206, 108, .72); --main-shadow: rgba(245, 206, 108, .26); --main-shadow-soft: rgba(245, 206, 108, .22); --main-shadow-mid: rgba(245, 206, 108, .35); --main-shadow-hover: rgba(245, 206, 108, .36); --main-glow: rgba(245, 206, 108, .48); --main-glow-strong: rgba(245, 206, 108, .9); --main-glow-full: rgba(245, 206, 108, 1); /* white / text */ --white: #fff; --white-soft: rgba(255,255,255,.82); --white-desc: rgba(255,255,255,.88); --white-mid: rgba(255,255,255,.55); --white-strong: rgba(255,255,255,.78); --white-halo: rgba(255,255,255,.82); --white-flash: rgba(255,255,255,1); /* accent */ --accent: #a73447; --accent-light: #c94a5d; --accent-soft: rgba(167, 52, 71, .42); --accent-close: rgba(167, 52, 71, .55); --accent-shadow: rgba(167, 52, 71, .35); /* page gradient */ --page-top: #3a1216; /* dark overlay / shadow */ --overlay-reveal: rgba(26, 10, 10, .66); --black-shadow-soft: rgba(0, 0, 0, .24); --black-shadow: rgba(0, 0, 0, .28); --black-shadow-mid: rgba(0, 0, 0, .35); --black-shadow-strong: rgba(0, 0, 0, .38); --black-shadow-heavy: rgba(0, 0, 0, .55); /* field lines */ --field-line-soft: rgba(245, 206, 108, .18); --field-line-mid: rgba(245, 206, 108, .22); --field-line: rgba(245, 206, 108, .25); --field-border: rgba(245, 206, 108, .24); /* vendor card */ --vendor-card-bg-1: #5d354c; --vendor-card-bg-2: #040919; --vendor-card-bg-3: #065761; --vendor-card-bg-4: #000d1b; /* reveal effects */ --halo-gold: rgba(245,206,108,.98); --halo-white: rgba(255,255,255,.82); --halo-transparent: rgba(255,255,255,0); --glow-center: rgba(255,255,255,.78); --glow-gold: rgba(245,206,108,.48); --glow-transparent: rgba(245,206,108,0); --ray-white: rgba(255,255,255,.78); --ray-gold: rgba(245,206,108,.72); --ray-transparent: rgba(245,206,108,0); --flash-white: rgba(255,255,255,1); --flash-gold: rgba(245,206,108,.82); --flash-transparent: rgba(245,206,108,0); /* confetti */ --confetti-red: #ff3b30; --confetti-orange: #ff9500; --confetti-yellow: #ffcc00; --confetti-green: #34c759; --confetti-cyan: #00c7ff; --confetti-blue: #007aff; --confetti-purple: #af52de; --confetti-pink: #ff2d55; --ink: var(--bg); /* 你原本的颜色变量继续保留 */ /* font sizes */ --fs-12: 12px; --fs-14: 14px; --fs-15: 15px; --fs-16: 16px; --fs-18: 18px; --fs-20: 20px; --fs-21: 21px; --fs-22: 22px; --fs-24: 24px; --fs-30: 30px; --fs-56: 56px; --fs-12-16: clamp(12px, 0.875vw, 16px); --fs-14-18: clamp(14px, 1.5vw, 18px); --fs-16-18: clamp(16px, 2vw, 18px); --fs-16-20: clamp(16px, 2vw, 20px); --fs-20-24: clamp(20px, 2.4vw, 24px); --fs-22-28: clamp(22px, 3vw, 28px); --fs-26-34: clamp(26px, 3.4vw, 34px); --fs-28-34: clamp(28px, 4vw, 34px); --fs-30-56: clamp(30px, 4vw, 56px); }
+:root { /* radius */ --panel-radius: 30px; /* base colors */ --bg: #1a0a0a; --bg-deep: #090303; --bg-soft: #2a0f11; --bg-card: #3a0505; --bg-field-stripe-a: #1a0a0a; --bg-field-stripe-b: #230d0f; --bg-vendor-dark: #051423; /* main colors */ --main: #f5ce6c; --font-secondary: #ffdedd; --color-brown: #472e27; --main-light: #fff1b8; --main-soft: rgba(245, 206, 108, .18); --main-page-glow: rgba(245, 206, 108, .16); --main-panel-glow: rgba(245, 206, 108, .13); --main-mid: rgba(245, 206, 108, .45); --main-strong: rgba(245, 206, 108, .82); --main-border: rgba(245, 206, 108, .25); --main-border-soft: rgba(245, 206, 108, .24); --main-border-mid: rgba(245, 206, 108, .28); --main-border-strong: rgba(245, 206, 108, .72); --main-shadow: rgba(245, 206, 108, .26); --main-shadow-soft: rgba(245, 206, 108, .22); --main-shadow-mid: rgba(245, 206, 108, .35); --main-shadow-hover: rgba(245, 206, 108, .36); --main-glow: rgba(245, 206, 108, .48); --main-glow-strong: rgba(245, 206, 108, .9); --main-glow-full: rgba(245, 206, 108, 1); /* white / text */ --white: #fff; --white-soft: rgba(255,255,255,.82); --white-desc: rgba(255,255,255,.88); --white-mid: rgba(255,255,255,.55); --white-strong: rgba(255,255,255,.78); --white-halo: rgba(255,255,255,.82); --white-flash: rgba(255,255,255,1); /* accent */ --accent: #a73447; --accent-light: #c94a5d; --accent-soft: rgba(167, 52, 71, .42); --accent-close: rgba(167, 52, 71, .85); --accent-shadow: rgba(167, 52, 71, .35); /* page gradient */ --page-top: #3a1216; /* dark overlay / shadow */ --overlay-reveal: rgba(26, 10, 10, .66); --black-shadow-soft: rgba(0, 0, 0, .24); --black-shadow: rgba(0, 0, 0, .28); --black-shadow-mid: rgba(0, 0, 0, .35); --black-shadow-strong: rgba(0, 0, 0, .38); --black-shadow-heavy: rgba(0, 0, 0, .55); /* field lines */ --field-line-soft: rgba(245, 206, 108, .18); --field-line-mid: rgba(245, 206, 108, .22); --field-line: rgba(245, 206, 108, .25); --field-border: rgba(245, 206, 108, .24); /* vendor card */ --vendor-card-bg-1: #5d354c; --vendor-card-bg-2: #040919; --vendor-card-bg-3: #065761; --vendor-card-bg-4: #000d1b; /* reveal effects */ --halo-gold: rgba(245,206,108,.98); --halo-white: rgba(255,255,255,.82); --halo-transparent: rgba(255,255,255,0); --glow-center: rgba(255,255,255,.78); --glow-gold: rgba(245,206,108,.48); --glow-transparent: rgba(245,206,108,0); --ray-white: rgba(255,255,255,.78); --ray-gold: rgba(245,206,108,.72); --ray-transparent: rgba(245,206,108,0); --flash-white: rgba(255,255,255,1); --flash-gold: rgba(245,206,108,.82); --flash-transparent: rgba(245,206,108,0); /* confetti */ --confetti-red: #ff3b30; --confetti-orange: #ff9500; --confetti-yellow: #ffcc00; --confetti-green: #34c759; --confetti-cyan: #00c7ff; --confetti-blue: #007aff; --confetti-purple: #af52de; --confetti-pink: #ff2d55; --ink: var(--bg); /* 你原本的颜色变量继续保留 */ /* font sizes */ --fs-12: 12px; --fs-14: 14px; --fs-15: 15px; --fs-16: 16px; --fs-18: 18px; --fs-20: 20px; --fs-21: 21px; --fs-22: 22px; --fs-24: 24px; --fs-30: 30px; --fs-56: 56px; --fs-12-16: clamp(12px, 0.875vw, 16px); --fs-14-18: clamp(14px, 1.5vw, 18px); --fs-16-18: clamp(16px, 2vw, 18px); --fs-16-20: clamp(16px, 2vw, 20px); --fs-20-24: clamp(20px, 2.4vw, 24px); --fs-22-28: clamp(22px, 3vw, 28px); --fs-26-34: clamp(26px, 3.4vw, 34px); --fs-28-34: clamp(28px, 4vw, 34px); --fs-30-56: clamp(30px, 4vw, 56px); }
 }
 
 body { font-family: "Microsoft YaHei", sans-serif; color: var(--white); background: var(--bg); }
@@ -316,7 +316,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
 .winnerBoard__tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 6px; background: #000; }
 
-.winnerBoard__tab { border-radius: 8px; color: var(--white); font-size: var(--fs-24); font-weight:bold; background: transparent; cursor: pointer; padding:6px;}
+.winnerBoard__tab { border-radius: 8px; color: var(--white); font-size: var(--fs-24); font-weight: bold; background: transparent; cursor: pointer; padding: 6px; }
 
     .winnerBoard__tab.is-active { color: var(--main); background: var(--color-brown); box-shadow: inset 0 0 0 1px var(--main-border); }
 
@@ -328,7 +328,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
     .winnerTable th { height: 48px; padding: 8px 10px; color: var(--white); font-size: var(--fs-16); text-align: center; white-space: nowrap; }
 
-    .winnerTable td { height: 38px; padding: 6px 10px; font-size: var(--fs-18); color: var(--white-soft);vertical-align: middle; text-align:center; }
+    .winnerTable td { height: 38px; padding: 6px 10px; font-size: var(--fs-18); color: var(--white-soft); vertical-align: middle; text-align: center; }
 
     .winnerTable tbody tr:nth-child(odd) { background: rgba(26, 10, 10, .68); }
 
@@ -339,7 +339,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
     .winnerTable td:nth-child(1) { width: 12%; }
 
     .winnerTable th:nth-child(2),
-    .winnerTable td:nth-child(2) { width: 34%; text-align:left; padding-left:10%;}
+    .winnerTable td:nth-child(2) { width: 34%; text-align: left; padding-left: 10%; }
 
     .winnerTable th:nth-child(3),
     .winnerTable td:nth-child(3) { width: 30%; }
@@ -349,9 +349,9 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
 .winnerUser { display: inline-grid; grid-template-columns: 28px minmax(0, auto); align-items: center; justify-content: center; gap: 8px; max-width: 100%; vertical-align: middle; }
 
-.winnerUser__avatar { width: 28px; height: 28px; border-radius: 999px; border: 1px solid var(--main); background: radial-gradient(circle at 50% 30%, var(--main-soft), transparent 55%), #26313b; overflow: hidden; } 
+.winnerUser__avatar { width: 28px; height: 28px; border-radius: 999px; border: 1px solid var(--main); background: radial-gradient(circle at 50% 30%, var(--main-soft), transparent 55%), #26313b; overflow: hidden; }
 
-.winnerUser__avatar img { width: 100%; height: 100%; object-fit: cover; display: block;  }
+    .winnerUser__avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 .winnerUser__name { min-width: 0; max-width: min(180px, 22vw); color: var(--white-soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: left; }
 
@@ -526,6 +526,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
     100% { opacity: 0; transform: rotate(var(--deg)) translateX(0px) scaleX(1.15); }
 }
+
 @keyframes rayCollapseBurst {
     0% { opacity: 0; transform: rotate(var(--deg)) translateX(18px) scaleX(.35); }
 
@@ -583,4 +584,119 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
     10% { opacity: 1; }
 
     100% { opacity: 0; transform: translate3d(var(--drift-x), 105vh, 0) rotate(var(--rotate-end)); }
+}
+
+
+
+.importantNote { width: min(1024px, calc(100% - 32px)); margin: 36px auto; padding-top: 30px; border-top: 1px solid var(--white-mid); color: var(--white); font-family: "Poppins", "Microsoft YaHei", sans-serif; }
+
+.importantNote__inner { width: 100%; text-align: center; }
+
+.importantNote__title { margin: 0 0 4px; font-size: var(--fs-30); line-height: 1.2; font-weight: 900; letter-spacing: .5px; color: var(--white); }
+
+.importantNote__desc { margin: 0 0 16px; font-size: var(--fs-18); line-height: 1.45; color: var(--white); }
+
+.importantNote__listWrap { display: grid; grid-template-columns: 1fr 1fr; text-align: left; background: repeating-linear-gradient(180deg, #301919 0, #301919 36px, #180909 36px, #180909 72px); }
+
+.importantNote__list { margin: 0; padding: 0 40px 0px 100px; font-size: var(--fs-16); line-height: 36px; color: var(--white); }
+
+    .importantNote__list:nth-child(2) { padding-left: 150px; }
+
+    .importantNote__list li { padding-left: 4px; }
+
+    @media (min-width:768px) and (max-width:1023.98px){
+        .importantNote__list { padding: 0 0px 0px 60px; font-size:var(--fs-14);}
+            .importantNote__list:nth-child(2) { padding-left: 120px; }
+    }
+
+@media (max-width: 760px) {
+    .importantNote { width: calc(100% - 20px); margin: 28px auto; padding-top: 22px; overflow: hidden; }
+
+    .importantNote__inner { overflow: visible; }
+
+    .importantNote__title { font-size: var(--fs-24); }
+
+    .importantNote__desc { margin-bottom: 14px; font-size: var(--fs-12); line-height: 1.45; }
+
+    .importantNote__listWrap { display: grid; grid-template-columns: 285px 285px; width: 100%; overflow-x: auto; overflow-y: hidden; text-align: left; -webkit-overflow-scrolling: touch; background: repeating-linear-gradient( 180deg, rgba(255, 255, 255, .055) 0, rgba(255, 255, 255, .055) 32px, rgba(0, 0, 0, .12) 32px, rgba(0, 0, 0, .12) 64px ); }
+
+    .importantNote__list { min-width: 260px; }
+
+        .importantNote__list,
+        .importantNote__list:nth-child(2) { padding: 0 18px 0 36px; font-size: var(--fs-12); line-height: 32px; white-space: nowrap; }
+
+            .importantNote__list li { padding-left: 2px; }
+}
+
+
+.fifa26F { position: fixed; bottom: 5%; }
+    .fifa26F.is-hidden { display: none; }
+.fifa26F-close { position: absolute; right: 0px; top: 0px; z-index: 20; width: 26px; height: 26px; border-radius: 999px; font-size: var(--fs-18); display: flex; justify-content: center; align-items: center; font-weight: bold; color: var(--main); background: var(--accent-close); box-shadow: inset 0 0 0 1px var(--main-border-mid), 0 8px 20px var(--black-shadow); cursor: pointer; z-index: 11; }
+
+
+.fifa26F-canvas { position: relative; width: 180px; height: 180px; aspect-ratio: 1/1; }
+.fafi26F-bg { width: 60%; z-index: 1; position: absolute; margin: auto; left: 0; right: 0; bottom: 7%; border-radius: 999px; transform-origin: center; animation: fifaBgBreath 3.2s ease-in-out infinite; }
+.fafi26F-c1 { width: 32%; position: absolute; z-index: 4; margin: auto; /*left: 0;*/ right: 17%; top: 12%; transform-origin: 50% 85%; animation: fifaCharFloatA 2.4s ease-in-out infinite; }
+.fafi26F-c2 { width: 32%; position: absolute; z-index: 3; margin: auto; left: 21%; /* right: 0; */ top: 16%; transform-origin: 50% 85%; animation: fifaCharFloatB 2.7s ease-in-out infinite; }
+.fafi26F-c3 { width: 45%; position: absolute; z-index: 2; margin: auto; left: 0; right: 0; top: 0; transform-origin: 50% 85%; animation: fifaCharFloatC 3s ease-in-out infinite; }
+.fafi26F-theme { width: 15%; position: absolute; z-index: 7; margin: auto; left: 0; right: 0; top: 22%; transform-origin: center; animation: fifaThemeGlow 1.8s ease-in-out infinite; }
+.fifa26F-balls { position: relative; width: 48%; z-index: 6; margin: auto; bottom: -38%; aspect-ratio: 1/1; }
+.fafi26F-ball { width: 100%; position: absolute; border-radius: 999px; transform-origin: center; animation: fifaBallRotate 64s linear infinite; }
+.fafi26F-ball2 { width: 100%; position: absolute; border-radius: 999px; transform-origin: center; animation: fifaBallRotateReverse 8s linear infinite; }
+.fafi26F-text { width: 80%; z-index: 9; position: absolute; bottom: 0; margin: auto; left: 0; right: 0; transform-origin: center; animation: fifaTextPulse 1.35s ease-in-out infinite; }
+
+@keyframes fifaCharFloatA {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+
+    35% { transform: translateY(-5px) rotate(2deg); }
+
+    65% { transform: translateY(2px) rotate(-1deg); }
+}
+
+@keyframes fifaCharFloatB {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+
+    35% { transform: translateY(4px) rotate(-2deg); }
+
+    70% { transform: translateY(-5px) rotate(1deg); }
+}
+
+@keyframes fifaCharFloatC {
+    0%, 100% { transform: translateY(0) scale(1); }
+
+    45% { transform: translateY(-4px) scale(1.025); }
+
+    75% { transform: translateY(2px) scale(.99); }
+}
+
+@keyframes fifaThemeGlow {
+    0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(245, 206, 108, 0)); }
+
+    50% { transform: scale(1.08); filter: drop-shadow(0 0 10px rgba(245, 206, 108, .75)); }
+}
+
+@keyframes fifaTextPulse {
+    0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(245, 206, 108, 0)); }
+
+    45% { transform: scale(1.08); filter: drop-shadow(0 0 12px rgba(245, 206, 108, .6)); }
+
+    70% { transform: scale(1.02); }
+}
+
+@keyframes fifaBallRotate {
+    from { transform: rotate(0deg); }
+
+    to { transform: rotate(360deg); }
+}
+
+@keyframes fifaBallRotateReverse {
+    from { transform: rotate(0deg); }
+
+    to { transform: rotate(-360deg); }
+}
+
+@keyframes fifaBgBreath {
+    0%, 100% { transform: scale(1); filter: brightness(1); }
+
+    50% { transform: scale(1.035); filter: brightness(1.08); }
 }
