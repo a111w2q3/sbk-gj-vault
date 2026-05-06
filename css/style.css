@@ -391,12 +391,12 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
             .winnerTable td:nth-child(1) { width: 12%; }
 
             .winnerTable th:nth-child(2),
-            .winnerTable td:nth-child(2) { width: 34%; }
+            .winnerTable td:nth-child(2) { width: 34%; padding-left: 4%; }
             .winnerTable td:nth-child(2) { text-align: left; }
             .winnerTable th:nth-child(3), .winnerTable td:nth-child(3) { width: 30%; }
             .winnerTable th:nth-child(4), .winnerTable td:nth-child(4) { width: 24%; }
     .winnerUser { gap: 4px; justify-content: center; min-width: 0; }
-    .winnerUser__avatar { width: 14px; height: 14px; border-width: 1px; }
+    .winnerUser__avatar { border-width: 1px; }
     .winnerUser__name { max-width: 72px; font-size: var(--fs-12); }
     .winnerPrize { font-size: var(--fs-12); }
     .winnerPager { gap: 8px; padding: 10px; justify-content: center; }
