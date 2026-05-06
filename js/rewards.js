@@ -133,12 +133,17 @@ function clearHintBox() {
 }
 
 function playRandomBoxHint() {
-    hintTimer = null;
-
-    if (!isChoosing || hasChosen) return;
+    if (!isChoosing || hasChosen) {
+        clearHintBox();
+        return;
+    }
 
     const boxes = [...boxesEl.querySelectorAll(".box")];
     if (!boxes.length) return;
+
+    boxes.forEach((box) => {
+        box.classList.remove("hint-shake");
+    });
 
     let randomIndex = Math.floor(Math.random() * boxes.length);
 
@@ -149,16 +154,20 @@ function playRandomBoxHint() {
     lastHintIndex = randomIndex;
 
     const targetBox = boxes[randomIndex];
-    const targetTreasure = targetBox.querySelector(".treasure");
-
-    if (!targetTreasure) return;
-
     targetBox.classList.add("hint-shake");
 
-    targetTreasure.addEventListener("animationend", () => {
+    const shakeDuration = 780;
+    const breatheDelay = 800 + Math.random() * 800;
+
+    hintTimer = setTimeout(() => {
         targetBox.classList.remove("hint-shake");
-    }, { once: true });
+
+        hintTimer = setTimeout(() => {
+            playRandomBoxHint();
+        }, breatheDelay);
+    }, shakeDuration);
 }
+
 function openLottery() {
     lotteryModal.classList.add("is-open");
     lotteryModal.setAttribute("aria-hidden", "false");
@@ -256,6 +265,8 @@ function launchConfetti(count = 72) {
 }
 async function chooseBox(selectedBox) {
     if (!isChoosing || hasChosen) return;
+
+    clearHintBox();
 
     hasChosen = true;
     isChoosing = false;
