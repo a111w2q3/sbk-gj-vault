@@ -626,9 +626,9 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
     .importantNote__league strong { color: var(--white); font-weight: 800; }
 
-.importantNote__listWrap { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; text-align: left; }
+.importantNote__listWrap { display: grid;/* grid-template-columns: 1fr 1fr;*/ gap: 16px; text-align: left; }
 
-.importantNote__group { border-radius: 12px; overflow: hidden; }
+.importantNote__group { border-radius: 12px; overflow: hidden; width:100%; max-width:680px; margin:auto; }
 
 .importantNote__groupTitle { margin: 0; padding: 10px 18px; background: var(--color-brown); color: var(--main); font-size: var(--fs-18); line-height: 1.25; font-weight: 900; text-align: center; }
 
