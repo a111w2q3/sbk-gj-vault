@@ -737,3 +737,21 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
     50% { transform: scale(1.035); filter: brightness(1.08); }
 }
+
+.rewardCard__chest { width: min(260px, 68vw); top: -112px; }
+
+    .rewardCard__chest .treasure,
+    .rewardCard__chest .treasure--reward { width: 100%; max-width: none; }
+
+.rewardCard__body { padding-top: 172px; }
+
+@media (max-width: 760px) {
+    .rewardCard__chest { width: min(230px, 72vw); top: -96px; }
+
+        .rewardCard__chest .treasure,
+        .rewardCard__chest .treasure--reward { width: 100%; max-width: none; }
+
+    .rewardCard__body { padding-top: 150px; }
+
+    .revealScene__reward { padding: 0; }
+}
