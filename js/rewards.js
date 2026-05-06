@@ -78,7 +78,8 @@ const confettiLayer = document.getElementById("confettiLayer");
 
 let isChoosing = false;
 let hasChosen = false;
-
+let lastHintIndex = -1;
+let hintTimer = null;
 function createTreasureHTML(extraClass = "") {
     return `
         <div class="treasure ${extraClass}">
@@ -111,9 +112,53 @@ function renderBoxes() {
 
     requestAnimationFrame(() => {
         boxesEl.classList.add("show");
+
+        clearHintBox();
+
+        hintTimer = setTimeout(() => {
+            playRandomBoxHint();
+        }, 900);
     });
 }
 
+function clearHintBox() {
+    if (hintTimer) {
+        clearTimeout(hintTimer);
+        hintTimer = null;
+    }
+
+    boxesEl.querySelectorAll(".box.hint-shake").forEach((box) => {
+        box.classList.remove("hint-shake");
+    });
+}
+
+function playRandomBoxHint() {
+    hintTimer = null;
+
+    if (!isChoosing || hasChosen) return;
+
+    const boxes = [...boxesEl.querySelectorAll(".box")];
+    if (!boxes.length) return;
+
+    let randomIndex = Math.floor(Math.random() * boxes.length);
+
+    if (boxes.length > 1 && randomIndex === lastHintIndex) {
+        randomIndex = (randomIndex + 1 + Math.floor(Math.random() * (boxes.length - 1))) % boxes.length;
+    }
+
+    lastHintIndex = randomIndex;
+
+    const targetBox = boxes[randomIndex];
+    const targetTreasure = targetBox.querySelector(".treasure");
+
+    if (!targetTreasure) return;
+
+    targetBox.classList.add("hint-shake");
+
+    targetTreasure.addEventListener("animationend", () => {
+        targetBox.classList.remove("hint-shake");
+    }, { once: true });
+}
 function openLottery() {
     lotteryModal.classList.add("is-open");
     lotteryModal.setAttribute("aria-hidden", "false");
@@ -133,6 +178,7 @@ function closeLotteryModal() {
 }
 
 function resetLottery() {
+    clearHintBox();
     boxesEl.classList.remove("show");
     boxesEl.innerHTML = "";
 
