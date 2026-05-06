@@ -536,6 +536,30 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
     100% { opacity: 0; transform: rotate(var(--deg)) translateX(430px) scaleX(1.85); }
 }
+
+.box.hint-shake .treasure { animation: treasureHintShake .78s ease-in-out 1; }
+
+@keyframes treasureHintShake {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); filter: none; }
+
+    8% { transform: translate3d(-2px, 1px, 0) scale(1.015); }
+
+    16% { transform: translate3d(3px, -1px, 0) scale(1.02); }
+
+    24% { transform: translate3d(-3px, 1px, 0) scale(1.02); }
+
+    32% { transform: translate3d(2px, -1px, 0) scale(1.015);  }
+
+    40% { transform: translate3d(-2px, 0, 0) scale(1.01); }
+
+    48% { transform: translate3d(2px, 1px, 0) scale(1.01); }
+
+    56% { transform: translate3d(-1px, -1px, 0) scale(1.005); }
+
+    68% { transform: translate3d(1px, 0, 0) scale(1); }
+
+    80% { transform: translate3d(0, 0, 0) scale(1); filter: none; }
+}
 /* =========================
    Responsive
 ========================= */
@@ -638,7 +662,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 }
 
         /****** fifa float */
-        .fifa26F { position: fixed; bottom: 5%; }
+        .fifa26F { position: fixed; bottom: 5%; z-index:99;}
     .fifa26F.is-hidden { display: none; }
 .fifa26F-close { position: absolute; right: 0px; top: 0px; z-index: 20; width: 26px; height: 26px; border-radius: 999px; font-size: var(--fs-18); display: flex; justify-content: center; align-items: center; font-weight: bold; color: var(--main); background: var(--accent-close); box-shadow: inset 0 0 0 1px var(--main-border-mid), 0 8px 20px var(--black-shadow); cursor: pointer; z-index: 11; }
 
