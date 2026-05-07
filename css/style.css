@@ -65,7 +65,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
 .claimBtn:active { transform: translateY(1px); box-shadow: 0 2px 0 var(--black-shadow-strong); }
 
-.chancePill { width: 194px; margin: 10px auto 10px; border-radius: 999px; background: var(--main); display: grid; grid-template-columns: 1fr 80px; align-items: center; overflow: hidden; }
+.chancePill {width: 180px;margin: 10px auto 10px;border-radius: 999px;background: var(--main);display: grid;grid-template-columns: 1fr 80px;align-items: center;overflow: hidden;}
 
 .chancePill__label { color: var(--bg); font-size: var(--fs-16); line-height: 1; }
 
@@ -104,7 +104,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
     .claimBtn { }
 
-    .chancePill { width: 220px; }
+    .chancePill {/* width: 220px; */}
 }
 
 /* =========================
