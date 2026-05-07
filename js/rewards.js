@@ -1,9 +1,72 @@
+//// float
+
 const fifa26Float = document.getElementById("fifa26Float");
 const fifa26Close = document.getElementById("fifa26Close");
 
 fifa26Close.addEventListener("click", () => {
     fifa26Float.classList.add("is-hidden");
 });
+
+
+//// popup
+const termPopup = document.getElementById("termPopup");
+const termPopupTitle = document.getElementById("termPopupTitle");
+const termPopupImage = document.getElementById("termPopupImage");
+const termPopupContent = document.getElementById("termPopupContent");
+const termPopupTriggers = document.querySelectorAll(".js-term-popup");
+const termPopupCloseEls = document.querySelectorAll("[data-term-popup-close]");
+
+function openTermPopup(title, imageSrc, content) {
+    if (!termPopup || !termPopupTitle || !termPopupImage || !termPopupContent) return;
+
+    termPopupTitle.textContent = title || "";
+    termPopupImage.src = imageSrc || "";
+    termPopupImage.alt = title || "";
+
+    termPopupContent.textContent = content || "";
+
+    termPopup.classList.add("is-open");
+    termPopup.setAttribute("aria-hidden", "false");
+}
+
+function closeTermPopup() {
+    if (!termPopup) return;
+
+    termPopup.classList.remove("is-open");
+    termPopup.setAttribute("aria-hidden", "true");
+
+    if (termPopupImage) {
+        termPopupImage.removeAttribute("src");
+        termPopupImage.removeAttribute("alt");
+    }
+
+    if (termPopupContent) {
+        termPopupContent.textContent = "";
+    }
+}
+
+termPopupTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+        openTermPopup(
+            trigger.dataset.popupTitle,
+            trigger.dataset.popupImage,
+            trigger.dataset.popupContent
+        );
+    });
+});
+
+termPopupCloseEls.forEach((closeEl) => {
+    closeEl.addEventListener("click", closeTermPopup);
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        closeTermPopup();
+    }
+});
+
+
+//// base
 
 const SCRIPT_URL = document.currentScript ? document.currentScript.src : "";
 const ASSET_BASE = SCRIPT_URL ? new URL("../image/", SCRIPT_URL).href : "image/";
