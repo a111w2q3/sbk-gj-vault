@@ -32,6 +32,10 @@
             <div class="jackpotJoin__inner">
                 <h2 class="jackpotJoin__title">How to Join the Daily Jackpot</h2>
 
+                <div class="importantNote__league">
+                    <span>League:</span>
+                    <strong>[League Name]</strong>
+                </div>
                 <div class="jackpotJoin__vendorTitle">Entitled Vender :</div>
 
                 <div class="jackpotJoin__vendors">
@@ -44,11 +48,11 @@
                     </div>
                 </div>
 
-                <p class="jackpotJoin__desc">
+                <a class="termsJumpBtn" href="#importantNote">Terms &amp; Conditions</a>
+                <p class="jackpotJoin__desc" style="display:none;">
                     Bet on (League Name) matches with min stake (x) &amp; min (x) matches/day to earn chances.
                 </p>
 
-                <a class="termsJumpBtn" href="#importantNote">Terms &amp; Conditions</a>
                 <div class="jackpotJoin__reward">
                     <div class="rewardRule">
                         <div class="rewardRule__chest" aria-hidden="true">
@@ -64,9 +68,11 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="rewardRule__pill">
-                            <span>Every 2 Match = 1 chest</span>
+                            <div class="rewardRule__title">Every 2 Match = 1 chest</div>
+                            <div class="rewardRule__meta">
+                                min stake (<span class="rewardRule__value">x</span>)
+                            </div>
                         </div>
                     </div>
                     <div class="jackpotJoin__dates">
@@ -75,12 +81,17 @@
                     </div>
                 </div>
 
-                <button class="claimBtn" id="drawBtn" type="button">CLAIM NOW</button>
+                <button class="claimBtn" id="drawBtn" type="button">
+                    <span class="claimBtn__text">CLAIM NOW</span>
 
-                <div class="chancePill">
-                    <span class="chancePill__label">Chance</span>
-                    <span class="chancePill__value">2</span>
-                </div>
+                    <span class="chancePill">
+                        <span class="chancePill__label">Chance</span>
+                        <span class="chancePill__value">
+                            <span class="chancePill__number">2</span>
+                        </span>
+                    </span>
+                </button>
+
 
                 <p class="jackpotJoin__note">
                     Chances will be expired in 24 hour. Please claim before expired!
@@ -96,10 +107,6 @@
                     Please note that ONLY the Bet Types, Markets, and League listed below are eligible for Jackpot participation. Any UNLISTED Bet Types, Markets, or Leagues are NOT eligible for Jackpot.
                 </p>
 
-                <div class="importantNote__league">
-                    <span>League:</span>
-                    <strong>[League Name]</strong>
-                </div>
                 <div class="importantNote__banner">
                     <div class="importantNote__bannerContent">
                         <div class="importantNote__bannerGroup">
