@@ -16,13 +16,20 @@ const termPopupContent = document.getElementById("termPopupContent");
 const termPopupTriggers = document.querySelectorAll(".js-term-popup");
 const termPopupCloseEls = document.querySelectorAll("[data-term-popup-close]");
 
+function getResponsivePopupImage(trigger) {
+    const isMobile = window.matchMedia("(max-width: 760px)").matches;
+
+    return isMobile
+        ? trigger.dataset.popupImageMobile || trigger.dataset.popupImageDesktop || ""
+        : trigger.dataset.popupImageDesktop || trigger.dataset.popupImageMobile || "";
+}
+
 function openTermPopup(title, imageSrc, content) {
     if (!termPopup || !termPopupTitle || !termPopupImage || !termPopupContent) return;
 
     termPopupTitle.textContent = title || "";
     termPopupImage.src = imageSrc || "";
     termPopupImage.alt = title || "";
-
     termPopupContent.textContent = content || "";
 
     termPopup.classList.add("is-open");
@@ -49,7 +56,7 @@ termPopupTriggers.forEach((trigger) => {
     trigger.addEventListener("click", () => {
         openTermPopup(
             trigger.dataset.popupTitle,
-            trigger.dataset.popupImage,
+            getResponsivePopupImage(trigger),
             trigger.dataset.popupContent
         );
     });
@@ -64,7 +71,6 @@ document.addEventListener("keydown", (event) => {
         closeTermPopup();
     }
 });
-
 
 //// base
 
