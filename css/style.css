@@ -42,8 +42,8 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
 .vendorCard img { max-width: 76%; max-height: 70%; object-fit: contain; display: block; }
 
-.jackpotJoin__desc { margin: 0 auto 66px; max-width: 860px; font-size: var(--fs-12-16); line-height: 1.5; color: var(--white); }
-
+.jackpotJoin__desc { margin: 0 auto 12px; max-width: 860px; font-size: var(--fs-12-16); line-height: 1.5; color: var(--white); }
+.termsJumpBtn { text-decoration: underline; margin: 14px auto 66px; padding: 6px 18px; font-size: var(--fs-16); color: #fff; display:block;}
 .jackpotJoin__reward { display: flex; flex-direction: column; align-items: center; margin-bottom: 54px; }
 
 .rewardRule { position: relative; display: flex; align-items: center; justify-content: center; min-height: 86px; }
@@ -89,6 +89,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
     .vendorCard { width: 132px; height: 88px; border-radius: 18px; }
 
     .jackpotJoin__desc { margin-bottom: 48px; }
+    .termsJumpBtn { margin-top: 14px; padding: 6px 14px; font-size: var(--fs-14); }
 
     .rewardRule { width: min(360px, 94vw); }
 
@@ -820,12 +821,3 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
     .revealScene__reward { padding: 0; }
 }
 
-.termsJumpBtn { display: inline-flex; align-items: center; justify-content: center; width: fit-content; margin: 18px auto 0; padding: 7px 18px; border-radius: 999px; border: 1px solid var(--main); color: var(--main); background: rgba(26, 10, 10, .45); font-size: var(--fs-14); line-height: 1.2; font-weight: 800; text-decoration: none; box-shadow: inset 0 0 0 1px var(--main-border), 0 0 14px var(--main-shadow-soft); transition: filter .18s ease, box-shadow .18s ease; margin: 14px auto 22px; padding: 6px 18px; font-size: var(--fs-14); }
-
-    .termsJumpBtn::after { content: "↓"; margin-left: 8px; font-weight: 900; }
-
-    .termsJumpBtn:hover { filter: brightness(1.08); box-shadow: inset 0 0 0 1px var(--main-border-strong), 0 0 18px var(--main-shadow); }
-
-@media (max-width: 760px) {
-    .termsJumpBtn { margin-top: 14px; padding: 6px 14px; font-size: var(--fs-12); }
-}
