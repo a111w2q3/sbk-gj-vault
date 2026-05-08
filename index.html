@@ -25,161 +25,62 @@
             </div>
         </div>
         <section class="banner">
-            <img src="image/banner_w1920.png" class="banner-desktop m-hide" />
-            <img src="image/banner_w1080.png" class="banner-mobile w-hide" />
+            <img src="image/banner_w1920.jpg" class="banner-desktop m-hide" />
+            <img src="image/banner_w1080.jpg" class="banner-mobile w-hide" />
         </section>
+
         <section class="jackpotJoin">
             <div class="jackpotJoin__inner">
-                <h2 class="jackpotJoin__title">How to Join the Daily Jackpot</h2>
+                <div class="jackpotJoin__vendorTitle">QUALIFIED VENDOR</div>
 
-                <div class="importantNote__league">
-                    <span>League:</span>
-                    <strong>[League Name]</strong>
-                </div>
-                <div class="jackpotJoin__vendorTitle">Entitled Vendor :</div>
+                <style>
+                    .btn-sport:hover {
+                        border: 2px solid #d8b23b;
+                        border-radius: 20px;
+                    }
+
+                    .btn-sport a > img {
+                        width: 100%;
+                    }
+                </style>
+
+
 
                 <div class="jackpotJoin__vendors">
-                    <div class="vendorCard vendorcolor--a">
-                        <img src="image/vendor-ssport.png" alt="Vendor Logo">
+                    <div class="btn-sport">
+                        <a href="#"><img src="image/btn-s-sport.png" alt="Vendor Logo"></a>
                     </div>
 
-                    <div class="vendorCard vendorcolor--b">
-                        <img src="image/vendor-maxbet.png" alt="Vendor Logo">
+                    <div class="btn-sport">
+                        <a href="#"><img src="image/btn-maxbet.png" alt="Vendor Logo"></a>
+                        
                     </div>
                 </div>
-
-                <a class="termsJumpBtn" href="#importantNote">Terms &amp; Conditions</a>
                 <p class="jackpotJoin__desc" style="display:none;">
                     Bet on (League Name) matches with min stake (x) &amp; min (x) matches/day to earn chances.
                 </p>
 
-                <div class="jackpotJoin__reward">
-                    <div class="rewardRule">
-                        <div class="rewardRule__chest" aria-hidden="true">
-                            <div class="treasure treasure--promo">
-                                <img class="base-inner" src="image/base-inner.png" alt="">
-                                <img class="rim-front" src="image/rim-front.png" alt="">
-                                <div class="treasure__glow"></div>
-                                <img class="base-outer" src="image/base-outer.png" alt="">
-                                <img class="lid-closed" src="image/lid-outer_unopen.png" alt="">
-                                <div class="lid-open">
-                                    <img class="lid-inner" src="image/lid-inner.png" alt="">
-                                    <img class="lid-outer" src="image/lid-outer.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rewardRule__pill">
-                            <div class="rewardRule__title">Every 2 Match = 1 chest</div>
-                            <div class="rewardRule__meta">
-                                min stake (<span class="rewardRule__value">x</span>)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="jackpotJoin__dates">
-                        <div>Start Date : 11-06-2026 12:00:00</div>
-                        <div>End Date : 19-07-2026 12:00:00</div>
-                    </div>
-                </div>
-
                 <button class="claimBtn" id="drawBtn" type="button">
                     <span class="claimBtn__text">CLAIM NOW</span>
-
-                    <span class="chancePill">
-                        <span class="chancePill__label">Chance</span>
-                        <span class="chancePill__value">
-                            <span class="chancePill__number">2</span>
-                        </span>
-                    </span>
                 </button>
 
-
+                <div class="arena-bottom">
+                    <div style="font-size: var(--fs-12-16);" class="lotteryPanel__warning">You have <span>2</span> chance to open.</div>
+                </div>
                 <p class="jackpotJoin__note">
                     Chances will be expired in 24 hour. Please claim before expired!
                 </p>
-            </div>
-        </section>
-
-        <section class="importantNote" id="importantNote">
-            <div class="importantNote__inner">
-                <h2 class="importantNote__title">IMPORTANT</h2>
-
-                <p class="importantNote__desc">
-                    Please note that ONLY the Bet Types, Markets, and League listed below are eligible for Jackpot participation. Any UNLISTED Bet Types, Markets, or Leagues are NOT eligible for Jackpot.
+                <p>
+                    <a class="termsJumpBtn" href="#importantNote">Terms &amp; Conditions</a>
                 </p>
-
-                <div class="importantNote__banner">
-                    <div class="importantNote__bannerContent">
-                        <div class="importantNote__bannerGroup">
-                            <h3>Entitled For Jackpot</h3>
-                            <button class="importantNote__bannerLink js-term-popup"
-                                    type="button"
-                                    data-popup-title="Main Market"
-                                    data-popup-image-desktop="image/Image_20260507123740_2911_5.png"
-                                    data-popup-image-mobile="image/Image_20260507154045_2941_5.jpg"
-                                    data-popup-content="Main Market refers to the eligible standard market list. Only the listed main markets will count towards Jackpot participation.">
-                                Main Market
-                            </button>
-                            <p>Example: UEFA CHAMPIONS LEAGUE</p>
-                        </div>
-
-                        <div class="importantNote__bannerLine"></div>
-
-                        <div class="importantNote__bannerGroup">
-                            <h3>NOT Entitled For Jackpot</h3>
-                            <button class="importantNote__bannerLink js-term-popup"
-                                    type="button"
-                                    data-popup-title="Special Market"
-                                    data-popup-image-desktop="image/Image_20260507123740_2911_5.png"
-                                    data-popup-image-mobile="image/Image_20260507154045_2941_5.jpg"
-                                    data-popup-content="Special Market is not entitled for Jackpot participation. Bets placed under unlisted markets will not count towards the Jackpot requirement.">
-                                Special Market
-                            </button>
-                            <p>
-                                Example: UEFA CHAMPIONS LEAGUE - xxxxx
-                                <br>
-                                OR UEFA CHAMPIONS LEAGUE (xxxxx)
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="importantNote__tableBox">
-                    <div class="importantNote__tableTitle">Entitled BetType</div>
-
-                    <ol class="importantNote__betList">
-                        <li>HDP &amp; FH HDP</li>
-                        <li>OU &amp; FH OU</li>
-                        <li>1X2 &amp; FH 1X2</li>
-                        <li>OE</li>
-                        <li>TOTAL GOAL</li>
-                        <li>DOUBLE CHANCE</li>
-                        <li>CORRECT SCORE &amp; FH CORRECT SCORE</li>
-                        <li>HT &amp; FT</li>
-                    </ol>
-                </div>
-
             </div>
+
+
         </section>
-        
-        <div class="termPopup" id="termPopup" aria-hidden="true">
-            <div class="termPopup__backdrop" data-term-popup-close></div>
 
-            <div class="termPopup__panel" role="dialog" aria-modal="true">
-                <button class="termPopup__close" type="button" data-term-popup-close aria-label="Close">×</button>
-
-                <h3 class="termPopup__title" id="termPopupTitle">Main Market</h3>
-
-                <div class="termPopup__imageBox">
-                    <img id="termPopupImage" src="" alt="">
-                </div>
-
-                <div class="termPopup__content" id="termPopupContent"></div>
-            </div>
-        </div>
-        
         <section class="winnerBoard">
             <h3 class="winnerBoard__title">
-                Sportsbook Daily Jackpot Winner!
+                FIFA WORLD CUP DAILY JACKPOT WINNER
             </h3>
             <div class="winnerBoard__tabs" role="tablist">
                 <button class="winnerBoard__tab is-active" type="button" data-winner-tab="top20">Top 20 Winners</button>
@@ -215,6 +116,136 @@
                 </button>
             </div>
         </section>
+
+        <section class="importantNote" id="importantNote">
+            <div class="importantNote__inner">
+
+                <h2 class="jackpotJoin__title">How to Join the Daily Jackpot</h2>
+                <div class="jackpotJoin__dates">
+                    <div>Start Date : 11-06-2026 12:00:00 (GMT+8) | End Date : 19-07-2026 12:00:00 (GMT+8)</div>
+                </div>
+
+                <div class="importantNote__league, jackpotJoin__title">
+                    <span>League:</span>
+                    <strong>FIFA World Cup 2026</strong>
+                </div>
+
+
+                <div class="jackpotJoin__reward">
+                    <div class="rewardRule">
+                        <div class="rewardRule__chest" aria-hidden="true">
+                            <div class="treasure treasure--promo">
+                                <img class="base-inner" src="image/base-inner.png" alt="">
+                                <img class="rim-front" src="image/rim-front.png" alt="">
+                                <div class="treasure__glow"></div>
+                                <img class="base-outer" src="image/base-outer.png" alt="">
+                                <img class="lid-closed" src="image/lid-outer_unopen.png" alt="">
+                                <div class="lid-open">
+                                    <img class="lid-inner" src="image/lid-inner.png" alt="">
+                                    <img class="lid-outer" src="image/lid-outer.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rewardRule__pill">
+                            <div class="rewardRule__title">Every 2 Match = 1 chest</div>
+                            <div class="rewardRule__meta">
+                                min stake (<span class="rewardRule__value">x</span>)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="importantNote__title">IMPORTANT</h2>
+
+                <p class="importantNote__desc">
+                    Please note that <b>ONLY</b> the Bet Types, Markets, and League listed below are qualify for Jackpot participation. Any <b>UNLISTED</b> Bet Types, Markets, or Leagues are <b>NOT</b> qualify for Jackpot.
+                </p>
+
+                <div class="importantNote__banner">
+                    <div class="importantNote__bannerContent">
+                        <div class="importantNote__bannerGroup">
+                            <h3>QUALIFIED For Jackpot</h3>
+                            <button class="importantNote__bannerLink js-term-popup"
+                                    type="button"
+                                    data-popup-title="Main Market"
+                                    data-popup-image-desktop="image/Image_20260507123740_2911_5.png"
+                                    data-popup-image-mobile="image/Image_20260507154045_2941_5.jpg"
+                                    data-popup-content="Main Market refers to the eligible standard market list. Only the listed main markets will count towards Jackpot participation.">
+                                Main Market
+                            </button>
+                            <p>
+                                <span style="display:inline-block; width:80px;">
+                                    Example:
+                                </span>WORLD CUP 2026
+                            </p>
+
+                        </div>
+
+                        <div class="importantNote__bannerLine"></div>
+
+                        <div class="importantNote__bannerGroup">
+                            <h3>NOT QUALIFIED For Jackpot</h3>
+                            <button class="importantNote__bannerLink js-term-popup"
+                                    type="button"
+                                    data-popup-title="Special Market"
+                                    data-popup-image-desktop="image/Image_20260507123740_2911_5.png"
+                                    data-popup-image-mobile="image/Image_20260507154045_2941_5.jpg"
+                                    data-popup-content="Special Market is not entitled for Jackpot participation. Bets placed under unlisted markets will not count towards the Jackpot requirement.">
+                                Special Market
+                            </button>
+                            <p>
+                                <span style="display:inline-block; width:80px;">
+                                    Example:
+                                </span>WORLD CUP 2026 - CORNERS
+                                <br />
+                                <span style="display:inline-block; width:80px;">
+                                    OR
+                                </span>WORLD CUP 2026 - BOOKING
+                                <br />
+                                <span style="display:inline-block; width:80px;">
+                                    OR
+                                </span>WORLD CUP 2026 (PLAYOFF)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="importantNote__tableBox">
+                    <div class="importantNote__tableTitle">Qualified Bet Type</div>
+
+                    <ol class="importantNote__betList">
+                        <li>HDP &amp; FH HDP</li>
+                        <li>OU &amp; FH OU</li>
+                        <li>1X2 &amp; FH 1X2</li>
+                        <li>OE</li>
+                        <li>TOTAL GOAL</li>
+                        <li>DOUBLE CHANCE</li>
+                        <li>CORRECT SCORE &amp; FH CORRECT SCORE</li>
+                        <li>HT &amp; FT</li>
+                    </ol>
+                </div>
+            </div>
+
+            <button class="claimBtn" id="#" type="button">
+                <span class="claimBtn__text">TERM & CONDITIONS</span>
+            </button>
+        </section>
+        
+        <div class="termPopup" id="termPopup" aria-hidden="true">
+            <div class="termPopup__backdrop" data-term-popup-close></div>
+
+            <div class="termPopup__panel" role="dialog" aria-modal="true">
+                <button class="termPopup__close" type="button" data-term-popup-close aria-label="Close">×</button>
+
+                <h3 class="termPopup__title" id="termPopupTitle">Main Market</h3>
+
+                <div class="termPopup__imageBox">
+                    <img id="termPopupImage" src="" alt="">
+                </div>
+
+                <div class="termPopup__content" id="termPopupContent"></div>
+            </div>
+        </div>
     </div>
 
     <div class="lotteryModal" id="lotteryModal" aria-hidden="true">
