@@ -644,7 +644,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
 .importantNote__banner { width: 100%; min-height: 300px; border-radius: 16px; overflow: hidden; position: relative; background-image: linear-gradient( 90deg, rgba(70, 10, 12, .88) 0%, rgba(70, 10, 12, .74) 28%, rgba(70, 10, 12, .3) 52%, rgba(70, 10, 12, 0) 78% ), url("../image/banner-term.jpg"); background-size: cover; background-position: center; margin-bottom: 40px; }
 
-.importantNote__bannerContent { width: min(430px, 48%); min-height: 300px; padding: 40px 0 34px 84px; display: flex; flex-direction: column; justify-content: center; text-align: left; position: relative; z-index: 2; }
+.importantNote__bannerContent { width: min(500px, 48%); min-height: 300px; padding: 40px 0 34px 84px; display: flex; flex-direction: column; justify-content: center; text-align: left; position: relative; z-index: 2; }
 
 .importantNote__bannerGroup h3 { margin: 0 0 4px; color: var(--main); font-size: var(--fs-22); line-height: 1.15; font-weight: 900; }
 
