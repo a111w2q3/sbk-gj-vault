@@ -49,7 +49,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
 .rewardRule__pill { min-height: 76px; padding: 0 32px 0 140px; border-radius: 0 999px 999px 0; background: linear-gradient(90deg, transparent, var(--accent)); display: flex; align-items: center; justify-content: center; flex-direction: column; }
 
-.rewardRule__title { font-size: var(--fs-22-28); font-weight: 900; line-height: 1; color: var(--main); white-space: nowrap; margin-bottom: 4px; }
+.rewardRule__title { font-size: var(--fs-22-18); font-weight: 900; line-height: 1; color: var(--main); white-space: nowrap; margin-bottom: 4px; }
 .rewardRule__meta { font-size: var(--fs-12-16); color: var(--white) }
 
 .rewardRule__chest { position: absolute; left: 0; top: 50%; width: 132px; height: 154px; transform: translateY(-50%); z-index: 2; }
@@ -82,7 +82,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 .jackpotJoin__note { margin: 0; font-size: var(--fs-12-16); line-height: 1.4; color: var(--white); }
 
 @media (max-width: 640px) {
-    .jackpotJoin { padding: 28px 14px 40px; }
+    .jackpotJoin { padding: 10px 10px; }
 
     .jackpotJoin__vendors { gap: 12px; }
 
@@ -373,7 +373,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 .winnerPager[hidden] { display: none !important; }
 
 @media (max-width: 760px) {
-    .winnerBoard { width: calc(100% - 16px); margin: 20px auto; border-radius: 8px; }
+    .winnerBoard { width: calc(100% - 16px); margin: -20px auto; border-radius: 8px; }
 
     .winnerBoard__title { margin-bottom: 10px; font-size: var(--fs-18); }
 
