@@ -56,7 +56,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
     .rewardRule__chest img { width: 100%; height: 100%; object-fit: contain; display: block; }
 
-.jackpotJoin__dates { margin-top: 20px; font-size: var(--fs-16-18); line-height: 1.55; font-weight: 400; color: var(--white); border-bottom: 1px solid var(--white-mid); padding-bottom: 20px; }
+.jackpotJoin__dates { margin-top: 20px; font-size: var(--fs-16-18); line-height: 1.55; font-weight: 400; color: var(--white); border-bottom: 0px solid var(--white-mid); padding-bottom: 20px; }
 
 
 .claimBtn { width: min(300px, 82vw); margin-bottom: 16px; border-radius: 45px; border:2px solid var(--main); background: var(--bg-card); cursor: pointer; box-shadow: 0 4px 0 var(--black-shadow-strong); transition: transform .18s ease, box-shadow .18s ease, filter .18s ease; padding-top: 12px; padding-bottom:  12px; }
