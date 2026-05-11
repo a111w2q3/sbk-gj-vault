@@ -42,7 +42,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 .vendorCard img { max-width: 76%; max-height: 70%; object-fit: contain; display: block; }
 
 .jackpotJoin__desc { margin: 0 auto 12px; max-width: 860px; font-size: var(--fs-12-16); line-height: 1.5; color: var(--white); }
-.termsJumpBtn { text-decoration: underline; margin: 10px auto; padding: 6px 18px; font-size: var(--fs-16); color: #fff; display: inline-block; font-weight: bold; }
+.termsJumpBtn { text-decoration: underline; margin: 0px auto; padding: 6px 18px; font-size: var(--fs-12); color: #fff; display: inline-block; font-weight: bold; }
 .jackpotJoin__reward { display: flex; flex-direction: column; align-items: center; margin-bottom: 54px; }
 
 .rewardRule { position: relative; display: flex; align-items: center; justify-content: center; min-height: 86px; }
