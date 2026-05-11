@@ -723,6 +723,8 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
     .termPopup__close { width: 30px; height: 30px; font-size: var(--fs-18); }
 
     .termPopup__content { font-size: var(--fs-12); }
+
+    .jackpotJoin__dates  { font-size: var(--fs-12); }
 }
 
 /****** fifa float */
