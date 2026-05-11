@@ -53,7 +53,7 @@
 
                     <div class="btn-sport">
                         <a href="#"><img src="image/btn-maxbet.png" alt="Vendor Logo"></a>
-                        
+
                     </div>
                 </div>
                 <p class="jackpotJoin__desc" style="display:none;">
@@ -173,7 +173,8 @@
                                     data-popup-content="Main Market refers to the eligible standard market list. Only the listed main markets will count towards Jackpot participation.">
                                 Main Market
                             </button>
-                            <p>WORLD CUP 2026 (IN CANADA, MEXICO & USA)
+                            <p>
+                                WORLD CUP 2026 (IN CANADA, MEXICO & USA)
                             </p>
 
                         </div>
@@ -201,7 +202,7 @@
                     </div>
                 </div>
 
-                <div class="importantNote__tableBox">
+                <div class="importantNote__tableBox" style="display:none;">
                     <div class="importantNote__tableTitle">Qualified Bet Type</div>
 
                     <ol class="importantNote__betList">
@@ -215,13 +216,76 @@
                         <li>HT &amp; FT</li>
                     </ol>
                 </div>
+
+
+                <div class="importantNote__tableBox">
+                    <div class="importantNote__tableTitle" onclick="toggleBetList()">
+                        Qualified Bet Type
+                        <span id="toggleIcon">+</span>
+                    </div>
+
+                    <ol class="importantNote__betList" id="betList">
+                        <li>HDP &amp; FH HDP</li>
+                        <li>OU &amp; FH OU</li>
+                        <li>1X2 &amp; FH 1X2</li>
+                        <li>OE</li>
+                        <li>TOTAL GOAL</li>
+                        <li>DOUBLE CHANCE</li>
+                        <li>CORRECT SCORE &amp; FH CORRECT SCORE</li>
+                        <li>HT &amp; FT</li>
+                    </ol>
+                </div>
+                <!---toggle start--->
+                <style>
+                    .importantNote__tableTitle {
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 12px;
+                        background: #222;
+                        color: #fff;
+                        border-radius: 8px;
+                    }
+
+                    .importantNote__betList {
+                        display: none;
+                        margin-top: 10px;
+                    }
+
+                        .importantNote__betList.active {
+                            display: block;
+                        }
+
+                    #toggleIcon {
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                </style>
+
+                <script>
+                    function toggleBetList() {
+                        const list = document.getElementById('betList');
+                        const icon = document.getElementById('toggleIcon');
+
+                        list.classList.toggle('active');
+
+                        if (list.classList.contains('active')) {
+                            icon.innerHTML = '−';
+                        } else {
+                            icon.innerHTML = '+';
+                        }
+                    }
+                </script>
+
+                <!---toggle end--->
             </div>
 
-            <button class="claimBtn" id="#" type="button">
+            <button class="claimBtn" id="#" type="button" onclick="openJackpotPopup()">
                 <span class="claimBtn__text">TERM & CONDITIONS</span>
             </button>
         </section>
-        
+
         <div class="termPopup" id="termPopup" aria-hidden="true">
             <div class="termPopup__backdrop" data-term-popup-close></div>
 
@@ -305,6 +369,115 @@
         </div>
     </div>
     <script src="js/rewards.js"></script>
+
+
+
+    <!-- Popup -->
+    <div class="jackpotPopup" id="jackpotPopup">
+        <div class="jackpotContent">
+            <div class="jackpotHeader">
+                <h2>Sportsbook Daily Jackpot – Terms & Conditions</h2>
+                <span class="closeBtn" onclick="closeJackpotPopup()">×</span>
+            </div>
+            <div class="jackpotBody">
+
+                <h3>1. General</h3>
+                <ol class="tncList">
+                    <li>The Sportsbook Daily Jackpot is a limited-time promotion available to eligible registered players during the promotion period.</li>
+                    <li>By participating, players confirm they have read, understood, and agreed to these Terms & Conditions, as well as the Company's General Terms & Conditions.</li>
+                </ol>
+
+                <h3>2. Eligibility</h3>
+                <ol class="tncList">
+                    <li>The promotion is only active during the designated promotion period. The jackpot icon will only be visible while the promotion is active.</li>
+                    <li>Players must have an active account in good standing to participate.</li>
+                </ol>
+
+                <h3>3. Qualifying Bets</h3>
+                <ol class="tncList">
+                    <li>Only bets placed on designated league(s) will qualify for jackpot draw chances.</li>
+
+                    <li>
+                        The following bet types are NOT QUALIFIED for the Sportsbook Daily Jackpot:
+
+                        <div class="notQualifiedBox">
+                            <div class="notQualifiedTitle">NOT QUALIFIED Bet Types</div>
+
+                            <ul class="subList">
+                                <li>Parlay</li>
+                                <li>Step</li>
+                                <li>Outright</li>
+                                <li>First Goal / Last Goal (FG/LG)</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>A minimum stake requirement per match must be met for a bet to qualify.</li>
+
+                    <li>Bets must be fully settled before they are considered for jackpot eligibility.</li>
+                </ol>
+
+                <h3>4. Anti-Hedging Rule</h3>
+                <ol class="tncList">
+                    <li>Players who place opposing bets on the same match may be disqualified from earning jackpot chances for that match.</li>
+                </ol>
+
+                <h3>5. Draw Chances</h3>
+                <ol class="tncList">
+                    <li>Draw chances are granted daily based on the number of eligible settled matches for that day.</li>
+                    <li>Draw chances that are not used within 24 hours will automatically expire and cannot be recovered.</li>
+                </ol>
+
+                <h3>6. Drawing & Prizes</h3>
+                <ol class="tncList">
+                    <li>Players may use their available chances to draw from the jackpot prize pool.</li>
+                    <li>Each draw consumes one (1) chance. Previous draws do not influence future draw outcomes.</li>
+                    <li>Prizes are credited to the player's account upon successful claim.</li>
+                </ol>
+
+                <h3>7. Fair Play & Abuse Prevention</h3>
+                <ol class="tncList">
+                    <li>The Company reserve the right to thoroughly review players' activities to identify any potential abuse and to ensure fair play within our Network Promotion. If any abuse is found, we reserve the right to forfeit any amounts paid to winning players.</li>
+
+                    <li>Any form of collusion, exploitation of promotion mechanics, use of automated tools, or fraudulent activity will result in immediate disqualification, forfeiture of prizes, and may result in account suspension.</li>
+                </ol>
+
+                <h3>8. General Provisions</h3>
+                <ol class="tncList">
+                    <li>The Company reserve the right to amend, suspend, or cancel the promotion at any time and without prior notice.</li>
+
+                    <li>The Company's decision on all matters relating to this promotion is final and binding.</li>
+
+                    <li>Prizes are non-transferable and cannot be exchanged for cash.</li>
+
+                    <li>The Company's General Terms & Conditions apply alongside these promotion terms.</li>
+                </ol>
+
+            </div>
+        </div>
+    </div>
+
+    <style>
+ 
+    </style>
+    <script>
+        function openJackpotPopup() {
+            document.getElementById("jackpotPopup").style.display = "flex";
+        }
+
+        function closeJackpotPopup() {
+            document.getElementById("jackpotPopup").style.display = "none";
+        }
+
+        /* Close when click outside */
+        window.onclick = function (event) {
+            const popup = document.getElementById("jackpotPopup");
+
+            if (event.target === popup) {
+                popup.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
