@@ -89,42 +89,57 @@ const rewards = [
     {
         image: "image/icn__money.png",
         name: "MYR 1000",
-        desc: "Congratulations! You won the grand prize!"
+        desc: "Congratulations! You won the grand prize!",
+        weight: 1
     },
     {
         image: "image/icn__money.png",
         name: "MYR 888",
-        desc: "Lucky you! You received"
+        desc: "Lucky you! You received",
+        weight: 2
     },
     {
         image: "image/icn__money.png",
         name: "MYR 500",
-        desc: "Lucky you! You received"
+        desc: "Lucky you! You received",
+        weight: 3
     },
     {
         image: "image/icn__money.png",
         name: "MYR 250",
-        desc: "Congratulations! You won the grand prize!"
+        desc: "Congratulations! You won the grand prize!",
+        weight: 4
     },
     {
         image: "image/icn__money.png",
         name: "MYR 100",
-        desc: "Congratulations! You received"
+        desc: "Congratulations! You received",
+        weight: 6
     },
     {
         image: "image/icn__money.png",
         name: "MYR 50",
-        desc: "Congratulations! You received"
+        desc: "Congratulations! You received",
+        weight: 8
     },
     {
         image: "image/icn__money.png",
         name: "MYR 20",
-        desc: "Congratulations! You received"
+        desc: "Congratulations! You received",
+        weight: 12
     },
     {
         image: "image/icn__money.png",
         name: "MYR 10",
-        desc: "Congratulations! You received"
+        desc: "Congratulations! You received",
+        weight: 16
+    },
+    {
+        //image: "image/icn__no-prize.png",
+        //name: "Better Luck Next Time",
+        desc: "Better Luck Next Time",
+        isNoPrize: true,
+        weight: 48
     }
 ];
 const drawBtn = document.getElementById("drawBtn");
@@ -277,13 +292,20 @@ function resetRevealScene() {
         "rays-on",
         "charge-on",
         "open-on",
-        "reward-on"
+        "reward-on",
+        "no-prize"
     );
 
     revealChest.innerHTML = "";
     revealChest.style.removeProperty("--start-x");
     revealChest.style.removeProperty("--start-y");
     revealRays.innerHTML = "";
+
+    if (rewardIcon) {
+        rewardIcon.hidden = false;
+        rewardIcon.removeAttribute("src");
+        rewardIcon.removeAttribute("alt");
+    }
 }
 
 function launchConfetti(count = 72) {
@@ -332,6 +354,25 @@ function launchConfetti(count = 72) {
         }, duration + delay + 400);
     }
 }
+
+function getRandomReward() {
+    const totalWeight = rewards.reduce((total, reward) => {
+        return total + (reward.weight || 1);
+    }, 0);
+
+    let random = Math.random() * totalWeight;
+
+    for (const reward of rewards) {
+        random -= reward.weight || 1;
+
+        if (random <= 0) {
+            return reward;
+        }
+    }
+
+    return rewards[rewards.length - 1];
+}
+
 async function chooseBox(selectedBox) {
     if (!isChoosing || hasChosen) return;
 
@@ -342,19 +383,34 @@ async function chooseBox(selectedBox) {
 
     lotteryModal.classList.add("is-revealing");
 
-    const reward = rewards[Math.floor(Math.random() * rewards.length)];
+    const reward = getRandomReward();
 
     await wait(140);
     playReveal(selectedBox, reward);
 }
 
 async function playReveal(selectedBox, reward) {
-    rewardIcon.src = reward.image;
-    rewardIcon.alt = reward.name;
-    rewardName.textContent = reward.name;
-    rewardDesc.textContent = reward.desc;
+    const isNoPrize = Boolean(reward.isNoPrize);
 
     resetRevealScene();
+
+    if (isNoPrize) {
+        revealScene.classList.add("no-prize");
+    }
+
+    if (reward.image) {
+        rewardIcon.src = reward.image;
+        rewardIcon.alt = reward.name || "";
+        rewardIcon.hidden = false;
+    } else {
+        rewardIcon.removeAttribute("src");
+        rewardIcon.removeAttribute("alt");
+        rewardIcon.hidden = true;
+    }
+
+    rewardName.textContent = reward.name || "";
+    rewardDesc.textContent = reward.desc || "";
+    againBtn.textContent = isNoPrize ? "CLOSE" : "CLAIM";
 
     const selectedTreasure = selectedBox.querySelector(".treasure");
     const stageRect = revealStage.getBoundingClientRect();
@@ -398,14 +454,22 @@ async function playReveal(selectedBox, reward) {
     revealScene.classList.add("open-on");
 
     const revealTreasure = revealChest.querySelector(".treasure");
+
     if (revealTreasure) {
+        if (isNoPrize) {
+            revealTreasure.classList.add("is-empty");
+        }
+
         revealTreasure.classList.add("is-open");
     }
 
     await wait(460);
 
     revealScene.classList.add("reward-on");
-    launchConfetti(80);
+
+    if (!isNoPrize) {
+        launchConfetti(80);
+    }
 }
 
 function createRays() {
