@@ -135,11 +135,10 @@ const rewards = [
         weight: 16
     },
     {
-        //image: "image/icn__no-prize.png",
-        //name: "Better Luck Next Time",
-        desc: "Better Luck Next Time",
+        name: "",
+        desc: "",
         isNoPrize: true,
-        weight: 48
+        weight: 80
     }
 ];
 const drawBtn = document.getElementById("drawBtn");
