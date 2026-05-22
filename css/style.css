@@ -923,3 +923,4 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 .revealScene.no-prize .rewardCard__amount { display: none; }
 .revealScene.no-prize .rewardCard__noPrize { display: block; position: relative; z-index: 9; }
 .revealScene.no-prize .rewardCard__body { padding-top: 50px; }
+.revealScene.no-prize .treasure.is-open .treasure__glow{display:none;}
