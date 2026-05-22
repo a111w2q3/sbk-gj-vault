@@ -914,12 +914,12 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
 .rewardCard__noPrize { display: none; width: 100%; margin-bottom: 22px; text-align: center; }
 
-.rewardCard__noPrizeText { width: min(220px, 72%); display: block; margin: 0 auto 14px; object-fit: contain; }
+.rewardCard__noPrizeText { width: min(270px, 90%); display: block; margin: 0 auto; object-fit: contain; }
 
-.rewardCard__noPrizeIcon { width: min(88px, 26%); display: block; margin: 0 auto; object-fit: contain; }
+.rewardCard__noPrizeIcon { width: min(110px, 40%); display: block; margin: 0 auto; object-fit: contain; }
 
 .revealScene.no-prize .rewardCard__normal { display: none; }
 
 .revealScene.no-prize .rewardCard__amount { display: none; }
-.revealScene.no-prize .rewardCard__noPrize { display: block; }
-.revealScene.no-prize .rewardCard__body { padding-top: 133px; }
+.revealScene.no-prize .rewardCard__noPrize { display: block; position: relative; z-index: 9; }
+.revealScene.no-prize .rewardCard__body { padding-top: 50px; }
