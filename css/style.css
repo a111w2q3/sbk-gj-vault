@@ -907,23 +907,19 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 }
 
 
-.treasure.is-empty .treasure__glow { display: none; }
-
-.revealScene.no-prize .treasure__glow { display: none; }
-
-.revealScene.no-prize .reward-name { color: var(--bg-card); }
-
-.revealScene.no-prize .reward-desc { color: var(--bg); }
 
 
-.reward-icon[hidden] { display: none !important; }
 
-.revealScene.no-prize .revealScene__reward { background: radial-gradient(circle at 50% 8%, rgba(245, 206, 108, .14), transparent 42%), linear-gradient(180deg, #fff7e4 0%, #e4d8c2 100%); color: #3a2d24; border-color: rgba(245, 206, 108, .32); box-shadow: 0 24px 70px var(--black-shadow-heavy), 0 0 42px rgba(245, 206, 108, .16); }
+.rewardCard__normal { display: block; }
 
-.revealScene.no-prize .reward-name { color: #5a4638; }
+.rewardCard__noPrize { display: none; width: 100%; margin-bottom: 22px; text-align: center; }
 
-.revealScene.no-prize .reward-desc { color: #7a6656; }
+.rewardCard__noPrizeText { width: min(220px, 72%); display: block; margin: 0 auto 14px; object-fit: contain; }
 
-.revealScene.no-prize .again-btn { color: var(--white); background: linear-gradient(180deg, #8a5b55 0%, #4a2a2a 100%); box-shadow: 0 8px 20px rgba(0, 0, 0, .32), inset 0 0 0 1px rgba(245, 206, 108, .18); }
+.rewardCard__noPrizeIcon { width: min(88px, 26%); display: block; margin: 0 auto; object-fit: contain; }
 
-.revealScene.no-prize .rewardCard__chest { filter: saturate(.72) brightness(.92) drop-shadow(0 16px 18px rgba(0, 0, 0, .22)); }
+.revealScene.no-prize .rewardCard__normal { display: none; }
+
+.revealScene.no-prize .rewardCard__amount { display: none; }
+.revealScene.no-prize .rewardCard__noPrize { display: block; }
+.revealScene.no-prize .rewardCard__body { padding-top: 133px; }
