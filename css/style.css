@@ -738,7 +738,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 .fafi26F-c1 { width: 32%; position: absolute; z-index: 4; margin: auto; /*left: 0;*/ right: 17%; top: 12%; transform-origin: 50% 85%; animation: fifaCharFloatA 2.4s ease-in-out infinite; }
 .fafi26F-c2 { width: 32%; position: absolute; z-index: 3; margin: auto; left: 21%; /* right: 0; */ top: 16%; transform-origin: 50% 85%; animation: fifaCharFloatB 2.7s ease-in-out infinite; }
 .fafi26F-c3 { width: 45%; position: absolute; z-index: 2; margin: auto; left: 0; right: 0; top: 0; transform-origin: 50% 85%; animation: fifaCharFloatC 3s ease-in-out infinite; }
-.fafi26F-theme { width: 15%; position: absolute; z-index: 7; margin: auto; left: 0; right: 0; top: 22%; transform-origin: center; animation: fifaThemeGlow 1.8s ease-in-out infinite; }
+.fafi26F-theme { width: 100%; position: absolute; z-index: 7; margin: auto; left: 0; right: 0; top: 22%; transform-origin: center; animation: fifaThemeGlow 1.8s ease-in-out infinite; }
 .fifa26F-balls { position: relative; width: 48%; z-index: 6; margin: auto; bottom: -38%; aspect-ratio: 1/1; }
 .fafi26F-ball { width: 100%; position: absolute; border-radius: 999px; transform-origin: center; animation: fifaBallRotate 64s linear infinite; }
 .fafi26F-ball2 { width: 100%; position: absolute; border-radius: 999px; transform-origin: center; animation: fifaBallRotateReverse 8s linear infinite; }
