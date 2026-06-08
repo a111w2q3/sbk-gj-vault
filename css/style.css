@@ -923,4 +923,14 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 .revealScene.no-prize .rewardCard__amount { display: none; }
 .revealScene.no-prize .rewardCard__noPrize { display: block; position: relative; z-index: 9; }
 .revealScene.no-prize .rewardCard__body { padding-top: 50px; }
-.revealScene.no-prize .treasure.is-open .treasure__glow{display:none;}
+.revealScene.no-prize .treasure.is-open .treasure__glow { display: none; }
+
+
+
+.jackpotJoin__reward { }
+.rewardRule__X { aspect-ratio: 1 / 1; position: absolute; left: 0; top: 50%; width: 132px; height: 154px; transform: translateY(-50%); z-index: 2; display: flex; justify-content: center; align-items: center; }
+    .rewardRule__X img { width: 76%; margin: auto; }
+
+@media (min-width:767.98px) {
+    .jackpotJoin__reward { display: flex; align-items: center; flex-direction: row; justify-content: center; }
+}
